@@ -11,7 +11,7 @@
 <body>
     <div class="form-container ">
         <h2>Registro</h2>
-        <form action="php/registro_usuarios_bd.php" method="POST" onsubmit="return validarFormulario()">
+        <form action="src/php/registro_usuarios_bd.php" method="POST" onsubmit="return validarFormulario()">
             <label for="nombres">Nombres:</label>
             <input type="text" id="nombres" name="nombres" required>
 
@@ -38,6 +38,10 @@
 
         <p>Todos los derechos reservados valiaddress &copy; 2024 </p>
     </div>
-    <script src="/assets/js/registre.js"></script>
+    <script src="assets/js/registre.js"></script>
+    
+    <?php 
+    include 'conexion.php';
+    ?>
 </body>
 </html>

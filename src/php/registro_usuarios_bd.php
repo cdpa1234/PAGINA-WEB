@@ -3,7 +3,7 @@
 include 'conexion.php';
 $conexion = new mysqli($server, $user, $pass, $db);
 
-if (isset($_POST['nombres']) && isset($_POST['apellidos']) && isset($_POST['identificacion']) && isset($_POST['telefono']) && isset($_POST['correo']) && isset($_POST['contrasena']) && isset($_POST['contrasena_confirmar'])) {
+if (isset($_POST['nombres']) && isset($_POST['apellidos']) && isset($_POST['identificacion']) && isset($_POST['telefono']) && isset($_POST['correo']) && isset($_POST['contrasena']) && isset($_POST['contrasena_confirmar'])); {
     $Nombres = $_POST['nombres'];
     $Apellidos = $_POST['apellidos'];
     $Identificacion = $_POST['identificacion'];
@@ -22,12 +22,11 @@ if (isset($_POST['nombres']) && isset($_POST['apellidos']) && isset($_POST['iden
         } else {
             echo "Error: " . $registro . "<br>" . mysqli_error($conexion);
         }
-    } else {
+    } else{
         echo "Las contraseñas no coinciden.";
     }
-} else {
-    echo "Por favor, complete todos los campos.";
-}
 
+    
+}
 mysqli_close($conexion);
 ?>
